@@ -45,7 +45,7 @@ pip install -r requirements.txt
 El archivo `requirements.txt` incluye todas las bibliotecas necesarias para ejecutar el proyecto, incluyendo:
 - PyTorch y Torchvision para el desarrollo de modelos
 - OpenCV y Pillow para procesamiento de imágenes
-- Matplotlib y Seaborn para visualización
+- Matplotlib para visualización
 - Scikit-learn para métricas y evaluación
 - KaggleHub para descarga de datasets
 - Face-alignment para detección y alineación de rostros
@@ -82,9 +82,9 @@ Los directorios de resultados se crearán automáticamente al ejecutar los scrip
 
 ### Descarga directa de modelos pre-entrenados
 
-Debido al tamaño de los archivos de modelos pre-entrenados, estos no están incluidos directamente en el repositorio. Para facilitar su acceso, hemos subido todos los modelos necesarios a Google Drive con la estructura de carpetas ya organizada:
+Debido al tamaño de los archivos de modelos pre-entrenados, estos no están incluidos directamente en el reposirtorio. Para facilitar su acceso, hemos subido todos los modelos necesarios a Google Drive con la estructura de carpetas ya organizada. También puedes encontrar una carpeta con los datasets descargados directamente siguiendo la estructura deseada.:
 
-[Enlace a modelos pre-entrenados en Google Drive](https://drive.google.com/drive/folders/12ZETTNHKC1LPfiE26xyK_mpIs90Chlv2?usp=sharing)
+[Enlace a modelos pre-entrenados y dataset de imágenes en Google Drive](https://drive.google.com/drive/folders/12ZETTNHKC1LPfiE26xyK_mpIs90Chlv2?usp=sharing)
 
 Si tienes problemas para configurar la estructura de carpetas o necesitas acceder rápidamente a cualquiera de los modelos, puedes descargarlos directamente desde este enlace y colocarlos en sus respectivas carpetas en el proyecto.
 
@@ -105,6 +105,29 @@ Para el entrenamiento y fine-tuning de nuestros modelos, utilizamos los siguient
 1. [Detect AI Generated Faces - High Quality Dataset](https://www.kaggle.com/datasets/shahzaibshazoo/detect-ai-generated-faces-high-quality-dataset): El conjunto de datos contiene unas 3.000 imágenes de rostros humanos, tanto reales como generadas por IA.
 
 2. [Human Faces Dataset](https://www.kaggle.com/datasets/kaustubhdhote/human-faces-dataset): El conjunto de datos contiene unas 9.600 imágenes de rostros humanos, tanto reales como generadas por IA.
+
+### Estructura de carpetas para los datasets
+Para que los modelos funcionen correctamente, es esencial que organices tus imágenes siguiendo esta estructura específica:
+
+```
+datasets/
+└── image/
+    └── AI-Face-Detection/
+        ├── real/
+        │   ├── imagen_real_1.jpg
+        │   ├── imagen_real_2.jpg
+        │   └── ...
+        └── fake/
+            ├── imagen_falsa_1.jpg
+            ├── imagen_falsa_2.jpg
+            └── ...
+```
+
+- La carpeta `real` debe contener exclusivamente imágenes de rostros reales
+- La carpeta `fake` debe contener exclusivamente imágenes de rostros generados por IA
+- Los formatos de imagen admitidos son: jpg, jpeg, png y bmp
+
+Si prefieres no descargar y organizar manualmente los datasets, puedes usar directamente la carpeta de datasets proporcionada en nuestro Google Drive, que ya sigue la estructura correcta.
 
 ## Modelos
 
