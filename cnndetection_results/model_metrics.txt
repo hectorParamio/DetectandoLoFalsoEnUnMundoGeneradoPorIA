@@ -1,0 +1,35 @@
+=== CNN Detection Model Performance ===
+
+Accuracy: 0.3166
+Precision: 0.3138
+Recall: 1.0000
+F1 Score: 0.4777
+
+Real images accuracy: 0.0059
+Fake images accuracy: 1.0000
+
+Confusion Matrix:
+               Predicted
+               Fake    Real
+Actual Fake    2002    0
+       Real    4378    26
+
+Additional Statistics:
+Total images: 6406
+Correct predictions: 2028
+Incorrect predictions: 4378
+
+Images predicted as real: 26 (0.41%)
+Images predicted as fake: 6380 (99.59%)
+
+=== Dataset Information ===
+
+Total images analyzed: 6406
+Real images: 4404
+Fake images: 2002
+
+=== Detection Parameters ===
+
+Optimal threshold: 0.0100
+Using inverted logic: True
+Note: With inverted logic, LOWER scores indicate fake images

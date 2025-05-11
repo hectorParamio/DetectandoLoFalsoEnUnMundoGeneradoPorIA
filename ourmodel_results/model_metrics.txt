@@ -1,0 +1,34 @@
+=== Our CNN Model Performance ===
+
+Accuracy: 0.9714
+Precision: 0.9439
+Recall: 1.0000
+F1 Score: 0.9712
+
+Real images accuracy: 0.9450
+AI-generated images accuracy: 1.0000
+
+Confusion Matrix:
+                 Predicted
+                 Real    AI-gen
+Actual Real     945     55
+       AI-gen   0       926
+
+Additional Statistics:
+Total images: 1926
+Correct predictions: 1871
+Incorrect predictions: 55
+
+Images predicted as real: 945 (49.07%)
+Images predicted as AI-generated: 981 (50.93%)
+
+=== Dataset Information ===
+
+Real images in test set: 1000
+AI-generated images in test set: 926
+
+=== Model Information ===
+
+Architecture: 2-layer CNN with fully connected layers
+Total parameters: 33,575,554
+Images with no landmarks detected: 208

@@ -1,0 +1,21 @@
+=== Fine-tuned CNN Model Performance ===
+
+Accuracy: 0.9891
+Precision: 0.9974
+Recall: 0.9676
+F1 Score: 0.9823
+
+Real images accuracy: 0.9989
+AI-generated images accuracy: 0.9676
+
+Confusion Matrix:
+                 Predicted
+                 Real    AI-gen
+Actual Real     880     1
+       AI-gen   13      388
+
+=== Model Information ===
+
+Architecture: 2-layer CNN with fully connected layers
+Total parameters: 33,575,554
+Images with no landmarks detected: 1656

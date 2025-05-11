@@ -1,0 +1,24 @@
+=== FaceForensics Fine-tuned Model Performance ===
+
+Accuracy: 0.9950
+Precision: 0.9950
+Recall: 0.9950
+F1 Score: 0.9950
+Real images accuracy: 0.9950
+Fake images accuracy: 0.9950
+
+=== Training Parameters ===
+
+Number of epochs: 10
+Batch size: 8
+Images per class: 1000
+Image size: 224x224
+Backbone frozen: True
+
+Total training time: 1h 14m 20.12s
+
+=== Dataset Information ===
+
+Training samples: 1280
+Validation samples: 320
+Test samples: 400

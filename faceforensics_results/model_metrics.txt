@@ -1,0 +1,29 @@
+=== FaceForensics Model Performance ===
+
+Accuracy: 0.4555
+Precision: 0.4734
+Recall: 0.7930
+F1 Score: 0.5929
+
+Real images accuracy: 0.7930
+Fake images accuracy: 0.1180
+
+Confusion Matrix:
+               Predicted
+               Fake    Real
+Actual Fake    118     882
+       Real    207     793
+
+Additional Statistics:
+Total images: 2000
+Correct predictions: 911
+Incorrect predictions: 1089
+
+Images predicted as real: 1675 (83.75%)
+Images predicted as fake: 325 (16.25%)
+
+=== Dataset Information ===
+
+MAX_IMAGES_PER_CLASS: 1000
+Real images: 1000
+Fake images: 1000
