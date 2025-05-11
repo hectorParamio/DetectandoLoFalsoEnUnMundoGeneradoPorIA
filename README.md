@@ -30,8 +30,8 @@ Nuestros objetivos principales fueron:
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/TU_USUARIO/detector-imagenes-ia.git
-cd detector-imagenes-ia
+git clone https://github.com/hectorParamio/DetectandoLoFalsoEnUnMundoGeneradoPorIA.git
+cd DetectandoLoFalsoEnUnMundoGeneradoPorIA
 
 # Crear entorno virtual (recomendado)
 python -m venv venv
@@ -54,6 +54,16 @@ python download_models.py
 - `compare_models.py`: Script para comparar el rendimiento de todos los modelos
 - `interface_models.py`: Interfaz gráfica para analizar imágenes con todos los modelos
 
+**Nota importante:** Para que los modelos funcionen correctamente, los archivos `.pth` deben colocarse siguiendo la estructura de carpetas del repositorio. Asegúrate de que todos los archivos de modelos pre-entrenados estén ubicados en sus respectivas carpetas.
+
+## Datasets utilizados
+
+Para el entrenamiento y fine-tuning de nuestros modelos, utilizamos los siguientes conjuntos de datos:
+
+1. [Detect AI Generated Faces - High Quality Dataset](https://www.kaggle.com/datasets/shahzaibshazoo/detect-ai-generated-faces-high-quality-dataset): El conjunto de datos contiene unas 3.000 imágenes de rostros humanos, tanto reales como generadas por IA.
+
+2. [Human Faces Dataset](https://www.kaggle.com/datasets/kaustubhdhote/human-faces-dataset): El conjunto de datos contiene unas 9.600 imágenes de rostros humanos, tanto reales como generadas por IA.
+
 ## Modelos
 
 ### Nuestro Modelo
@@ -66,7 +76,6 @@ Implementamos un modelo CNN personalizado para la detección de imágenes genera
 - Entrenado con un conjunto de datos de rostros reales y generados por IA
 
 ```bash
-# Ejecutar entrenamiento
 python model_ours.py
 ```
 
@@ -79,7 +88,6 @@ Al evaluar nuestro modelo original con un conjunto de datos diferente, observamo
 - Mejor capacidad de generalización a diferentes estilos de imágenes generadas por IA
 
 ```bash
-# Ejecutar fine-tuning
 python models_ours_finetunned.py
 ```
 
@@ -93,7 +101,6 @@ Implementamos el modelo CNN Detection de Wang et al., que utiliza una arquitectu
 - Alta precisión en la detección de artifacts de generación
 
 ```bash
-# Ejecutar evaluación
 python model_cnndetection.py
 ```
 
@@ -107,7 +114,6 @@ Implementamos el modelo FaceForensics, especializado en la detección de deepfak
 - Incluye detector de rostros integrado
 
 ```bash
-# Ejecutar evaluación
 python model_faceforensics.py
 ```
 
@@ -120,7 +126,6 @@ Similar a nuestro enfoque con nuestro propio modelo, realizamos fine-tuning del 
 - Mejor equilibrio entre detección de imágenes reales y falsas
 
 ```bash
-# Ejecutar fine-tuning
 python model_faceforensics_finetuned.py
 ```
 
@@ -129,7 +134,6 @@ python model_faceforensics_finetuned.py
 Desarrollamos un script para comparar todos los modelos y visualizar sus métricas de rendimiento, incluyendo precisión, recall, F1-score y matrices de confusión.
 
 ```bash
-# Ejecutar comparación
 python compare_models.py
 ```
 
@@ -146,7 +150,6 @@ Implementamos una interfaz gráfica que permite cargar imágenes y analizarlas c
 - Representación gráfica de resultados
 
 ```bash
-# Lanzar la interfaz
 python interface_models.py
 ```
 
@@ -159,4 +162,4 @@ python interface_models.py
 
 ---
 
-Desarrollado por [Tu Nombre] y [Nombre de tu Compañero] - 2024 
+Desarrollado por Héctor Paramio García e Iker Barrio Elorduy - 2025 
