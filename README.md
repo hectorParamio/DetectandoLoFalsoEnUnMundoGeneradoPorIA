@@ -35,14 +35,58 @@ cd DetectandoLoFalsoEnUnMundoGeneradoPorIA
 
 # Crear entorno virtual (recomendado)
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+
+venv\Scripts\activate  # En Linux: source venv/bin/activate
 
 # Instalar dependencias
 pip install -r requirements.txt
-
-# Descargar modelos pre-entrenados (si es necesario)
-python download_models.py
 ```
+
+El archivo `requirements.txt` incluye todas las bibliotecas necesarias para ejecutar el proyecto, incluyendo:
+- PyTorch y Torchvision para el desarrollo de modelos
+- OpenCV y Pillow para procesamiento de imágenes
+- Matplotlib y Seaborn para visualización
+- Scikit-learn para métricas y evaluación
+- KaggleHub para descarga de datasets
+- Face-alignment para detección y alineación de rostros
+
+**Nota importante sobre la estructura de archivos:** Para que los modelos funcionen correctamente, debes asegurarte de que los archivos estén organizados según la siguiente estructura:
+
+1. **Datasets**:
+   - Ruta principal: `datasets/image/AI-Face-Detection/`
+   - Imágenes reales: `datasets/image/AI-Face-Detection/real/`
+   - Imágenes falsas/generadas por IA: `datasets/image/AI-Face-Detection/fake/`
+
+2. **Modelos pre-entrenados originales**:
+   - CNN Detection: `models/cnndetection_image/weights/blur_jpg_prob0.5.pth`
+   - FaceForensics: Se descarga automáticamente desde la URL definida en el código
+   - Componente de FaceForensics (detector Blazeface): `models/faceforensics_image/blazeface/blazeface.pth`
+   - Nuestro modelo personalizado: `ourmodel_results/ours.pth`
+
+3. **Modelos fine-tuned**:
+   - FaceForensics fine-tuned: `faceforensics_finetunned_results/faceforensics_finetuned.pth`
+   - Nuestro modelo fine-tuned: `ourmodel_finetunned_results/ours_finetunned.pth`
+
+4. **Directorios de resultados** (creados automáticamente por los scripts):
+   - Modelo original:
+     - `ourmodel_results/`
+     - `faceforensics_results/`
+     - `cnndetection_results/`
+   - Modelo fine-tuned:
+     - `ourmodel_finetunned_results/`
+     - `faceforensics_finetunned_results/`
+
+Los directorios de resultados se crearán automáticamente al ejecutar los scripts.
+
+**Importante:** Para poder ejecutar el fine-tuning (scripts `models_ours_finetunned.py` y `model_faceforensics_finetuned.py`), es necesario que los modelos originales correspondientes ya estén descargados y ubicados correctamente en las rutas especificadas.
+
+### Descarga directa de modelos pre-entrenados
+
+Debido al tamaño de los archivos de modelos pre-entrenados, estos no están incluidos directamente en el repositorio. Para facilitar su acceso, hemos subido todos los modelos necesarios a Google Drive con la estructura de carpetas ya organizada:
+
+[Enlace a modelos pre-entrenados en Google Drive](https://drive.google.com/drive/folders/12ZETTNHKC1LPfiE26xyK_mpIs90Chlv2?usp=sharing)
+
+Si tienes problemas para configurar la estructura de carpetas o necesitas acceder rápidamente a cualquiera de los modelos, puedes descargarlos directamente desde este enlace y colocarlos en sus respectivas carpetas en el proyecto.
 
 ## Estructura del proyecto
 
@@ -53,8 +97,6 @@ python download_models.py
 - `model_faceforensics_finetuned.py`: Versión fine-tuned del modelo FaceForensics
 - `compare_models.py`: Script para comparar el rendimiento de todos los modelos
 - `interface_models.py`: Interfaz gráfica para analizar imágenes con todos los modelos
-
-**Nota importante:** Para que los modelos funcionen correctamente, los archivos `.pth` deben colocarse siguiendo la estructura de carpetas del repositorio. Asegúrate de que todos los archivos de modelos pre-entrenados estén ubicados en sus respectivas carpetas.
 
 ## Datasets utilizados
 
