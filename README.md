@@ -82,11 +82,13 @@ Los directorios de resultados se crearán automáticamente al ejecutar los scrip
 
 ### Descarga directa de modelos pre-entrenados
 
-Debido al tamaño de los archivos de modelos pre-entrenados, estos no están incluidos directamente en el reposirtorio. Para facilitar su acceso, hemos subido todos los modelos necesarios a Google Drive con la estructura de carpetas ya organizada. También puedes encontrar una carpeta con los datasets descargados directamente siguiendo la estructura deseada.:
+Debido al tamaño de los archivos de modelos pre-entrenados, estos no están incluidos directamente en el repositorio. Para facilitar su acceso, hemos subido todos los modelos necesarios a Google Drive con la estructura de carpetas ya organizada. También puedes encontrar una carpeta con los datasets descargados directamente siguiendo la estructura deseada. Si tienes problemas para configurar la estructura de carpetas o necesitas acceder rápidamente a cualquiera de los modelos, puedes descargarlos directamente desde este enlace y colocarlos en sus respectivas carpetas en el proyecto:
 
 [Enlace a modelos pre-entrenados y dataset de imágenes en Google Drive](https://drive.google.com/drive/folders/12ZETTNHKC1LPfiE26xyK_mpIs90Chlv2?usp=sharing)
 
-Si tienes problemas para configurar la estructura de carpetas o necesitas acceder rápidamente a cualquiera de los modelos, puedes descargarlos directamente desde este enlace y colocarlos en sus respectivas carpetas en el proyecto.
+
+**Nota**: Aunque los modelos CNNDetection y el componente de FaceForensics (detector Blazeface) se encuentran disponibles en el Google Drive proporcionado, originalmente fueron descargados desde sus respectivos repositorios en GitHub gracias al trabajo de recopilación realizado en [DeepSafe](https://github.com/siddharthksah/DeepSafe). Esto permitió integrarlos fácilmente en el proyecto.
+
 
 ## Estructura del proyecto
 
